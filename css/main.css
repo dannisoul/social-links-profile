@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #141414;
+    --dark-grey: #1F1F1F;
+    --grey: #333333;
+    --white: #FFFFFF;
+    --neon-green: #C4F82A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+body{
+    font-family: 'Inter';
+    background-color: var(--black);
+}
+
+main{
+    min-height: 100dvh;
+    display: flex;
+    padding: 1.5rem;
+}
+
+.card{
+    margin: auto;
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 12px;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 384px;
+
+    .profile-pic{
+        width: 88px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    .name-location{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .name{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: var(--white);
+    }
+
+    .location{
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--neon-green);
+    }
+
+    .bio{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .links{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .links li a{
+        text-decoration: none;
+        color: var(--white);
+        display: block;
+        background-color: var(--grey);
+        padding: 0.75rem;
+        width: 100%;
+        text-align: center;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .links li a:hover{
+        background-color: var(--neon-green);
+        color: var(--black);
+        transition: all .3s ease-in;
+    }
+}
+
+
+@media (width < 576px){
+    .card{
+        padding: 1.5rem;
+    }
+}
